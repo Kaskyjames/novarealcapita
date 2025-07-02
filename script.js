@@ -1,9 +1,38 @@
+// Smooth Scroll Navigation
+document.querySelectorAll('header nav a').forEach(link => {
+  link.addEventListener('click', e => {
+    if (link.getAttribute('href').startsWith('#')) {
+      e.preventDefault();
+      const target = document.querySelector(link.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  });
+});
+
 // Investment Plan Toggle
 function togglePlan(card) {
   card.classList.toggle('active');
 }
 
-// Testimonial Carousel Logic
+// Project Lightbox Functions
+function openLightbox(src) {
+  const lightbox = document.getElementById('lightbox');
+  const img = document.getElementById('lightbox-img');
+  img.src = src;
+  lightbox.style.display = 'flex';
+}
+function closeLightbox() {
+  document.getElementById('lightbox').style.display = 'none';
+}
+document.addEventListener('click', e => {
+  if (e.target.id === 'lightbox') {
+    closeLightbox();
+  }
+});
+
+// Testimonials Carousel
 const testimonials = document.querySelectorAll('.testimonial');
 let currentTestimonial = 0;
 
@@ -16,52 +45,40 @@ function showTestimonial(index) {
   });
 }
 
-// Navigation Buttons
-const prevBtn = document.getElementById('prevTestimonial');
-const nextBtn = document.getElementById('nextTestimonial');
-
-if (prevBtn && nextBtn) {
-  prevBtn.addEventListener('click', () => {
-    currentTestimonial = (currentTestimonial - 1 + testimonials.length) % testimonials.length;
-    showTestimonial(currentTestimonial);
-  });
-
-  nextBtn.addEventListener('click', () => {
-    currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-    showTestimonial(currentTestimonial);
-  });
-}
-
-// Show first testimonial by default
-showTestimonial(currentTestimonial);
-
-// Project Lightbox Preview
-function openLightbox(src) {
-  const lightbox = document.getElementById('lightbox');
-  const lightboxImg = document.getElementById('lightbox-img');
-  lightboxImg.src = src;
-  lightbox.style.display = 'flex';
-}
-
-function closeLightbox() {
-  document.getElementById('lightbox').style.display = 'none';
-}
-
-// Close lightbox when clicking outside image
-document.addEventListener('click', (e) => {
-  const lightbox = document.getElementById('lightbox');
-  if (e.target === lightbox) {
-    closeLightbox();
-  }
+document.getElementById('prevTestimonial').addEventListener('click', () => {
+  currentTestimonial = (currentTestimonial - 1 + testimonials.length) % testimonials.length;
+  showTestimonial(currentTestimonial);
 });
 
-// ScrollReveal Animations (optional, requires ScrollReveal.js CDN)
+document.getElementById('nextTestimonial').addEventListener('click', () => {
+  currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+  showTestimonial(currentTestimonial);
+});
+
+// Initialize first testimonial
+showTestimonial(currentTestimonial);
+
+// Optional ScrollReveal animations (if you load ScrollReveal.js)
 if (typeof ScrollReveal !== 'undefined') {
-  ScrollReveal().reveal('.fade-in', {
-    duration: 1000,
-    distance: '30px',
+  ScrollReveal().reveal('.service-card', {
+    duration: 800,
+    distance: '40px',
+    easing: 'ease-out',
     origin: 'bottom',
-    easing: 'ease-in-out',
+    interval: 100
+  });
+  ScrollReveal().reveal('.plan-card', {
+    duration: 800,
+    distance: '40px',
+    easing: 'ease-out',
+    origin: 'bottom',
+    interval: 100
+  });
+  ScrollReveal().reveal('.project-card', {
+    duration: 800,
+    distance: '40px',
+    easing: 'ease-out',
+    origin: 'bottom',
     interval: 100
   });
 }
