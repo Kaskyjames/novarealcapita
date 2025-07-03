@@ -3,22 +3,77 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Growth Plan – Register | Novareal Capital</title>
-  <link href="https://cdn.tailwindcss.com" rel="stylesheet" />
+  <title>Register – Growth Plan | Novareal Capital</title>
+  <meta name="description" content="Register for the Growth investment plan at Novareal Capital for higher returns and balanced risk real estate investing.">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body class="bg-gray-50 text-gray-800">
-  <div class="max-w-2xl mx-auto px-6 py-12">
-    <h1 class="text-3xl font-bold text-green-700 mb-6">Growth Plan Registration</h1>
-    <form action="https://formspree.io/f/your_form_id" method="POST" class="space-y-6 bg-white p-6 rounded-lg shadow">
-      <input type="hidden" name="Plan" value="Growth">
-      <div><label class="block mb-1">Full Name</label><input name="name" required class="w-full border p-3 rounded"></div>
-      <div><label class="block mb-1">Email</label><input name="email" type="email" required class="w-full border p-3 rounded"></div>
-      <div><label class="block mb-1">Phone Number</label><input name="phone" class="w-full border p-3 rounded"></div>
-      <div><label class="block mb-1">Country</label><input name="country" class="w-full border p-3 rounded"></div>
-      <div><label class="block mb-1">Investment Goal</label><textarea name="goal" rows="3" class="w-full border p-3 rounded"></textarea></div>
-      <button class="bg-green-700 text-white py-3 px-6 rounded hover:bg-green-800 w-full">Submit Registration</button>
-    </form>
-    <p class="mt-4 text-sm text-center">Back to <a href="index.html#plans" class="underline text-green-700">Plans</a></p>
-  </div>
+
+  <!-- HEADER -->
+  <header class="bg-white shadow sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="index.html" class="text-2xl font-bold text-green-700">Novareal Capital</a>
+      <a href="index.html#plans" class="text-sm text-green-600 hover:underline">← Back to Plans</a>
+    </div>
+  </header>
+
+  <!-- FORM SECTION -->
+  <section class="py-16 px-4" data-aos="fade-up">
+    <div class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-md">
+      <h1 class="text-3xl font-bold text-green-700 mb-6 text-center">Growth Plan Registration</h1>
+      <p class="mb-6 text-gray-600 text-center">Designed for balanced returns and long-term wealth. Let’s get you started.</p>
+
+      <form action="https://formspree.io/f/your_form_id" method="POST" class="space-y-6">
+        <input type="hidden" name="Plan" value="Growth">
+
+        <div>
+          <label class="block text-sm font-medium mb-1">Full Name <span class="text-red-500">*</span></label>
+          <input name="name" type="text" required class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-green-600">
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium mb-1">Email Address <span class="text-red-500">*</span></label>
+          <input name="email" type="email" required class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-green-600">
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium mb-1">Phone Number</label>
+          <input name="phone" type="tel" class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-green-600">
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium mb-1">Country</label>
+          <input name="country" type="text" class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-green-600">
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium mb-1">Investment Goal</label>
+          <textarea name="goal" rows="3" placeholder="What would you like to achieve with this investment?" class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-green-600"></textarea>
+        </div>
+
+        <button type="submit" class="w-full bg-green-700 hover:bg-green-800 text-white font-semibold py-3 px-6 rounded-lg transition duration-300">
+          Submit Registration
+        </button>
+      </form>
+
+      <p class="mt-6 text-sm text-center text-gray-500">
+        Already registered? <a href="index.html#login" class="text-green-600 underline">Log in</a>.
+      </p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-100 py-8 text-center text-sm text-gray-500">
+    &copy; 2025 Novareal Capital. All rights reserved.
+  </footer>
+
+  <!-- AOS Init -->
+  <script>
+    AOS.init();
+  </script>
+
 </body>
 </html>
