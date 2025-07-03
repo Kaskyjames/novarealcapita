@@ -50,6 +50,7 @@
           <p>We aim to build wealth for our clients through transparency, innovation, and real estate excellence.</p>
         </div>
       </div>
+        
     <!-- LIVE STATS WIDGET -->
         <div class="bg-gray-100 p-6 rounded-xl shadow space-y-4">
           <div class="flex items-center space-x-3">
@@ -258,6 +259,18 @@
   <!-- SCRIPTS -->  
   <script>
     AOS.init();
+
+
+  function updateLiveStats() {
+  document.getElementById('stat-investors').textContent = (250 + Math.floor(Math.random() * 50)).toLocaleString();
+  document.getElementById('stat-properties').textContent = (60 + Math.floor(Math.random() * 15)).toLocaleString();
+  document.getElementById('stat-revenue').textContent = "$" + (3200000 + Math.floor(Math.random() * 30000)).toLocaleString();
+  document.getElementById('stat-countries').textContent = (12 + Math.floor(Math.random() * 4)).toString();
+}
+
+updateLiveStats();
+setInterval(updateLiveStats, 10000);
+
 
     // Simulated real-time dashboard data
 function updateLiveStats() {
