@@ -179,11 +179,11 @@
     AOS.init();
 
   const plans = [
-    { name: "Starter", roi: "10%", duration: "3 months", features: ["Low entry", "Quarterly payouts"] },
-    { name: "Growth", roi: "15%", duration: "6 months", features: ["Balanced risk", "Bi-annual payouts"] },
-    { name: "Legacy", roi: "18% - 20%", duration: "12 months", features: ["Estate-grade assets", "Annual payouts"] },
-    { name: "Global Investor", roi: "Custom", duration: "12 months", features: ["Diversified global portfolio", "Tailored strategy"] },
-    { name: "Enterprise", roi: "Tailored", duration: "Corporate use", features: ["Portfolio optimization", "Dedicated advisory"] },
+    { name: "Starter", roi: "10%", duration: "3 months", link: "register-starter.html", features: ["Low entry", "Quarterly payouts"] },
+    { name: "Growth", roi: "15%", duration: "6 months", link: "register-growth.html", features: ["Balanced risk", "Bi-annual payouts"] },
+    { name: "Legacy", roi: "18% - 20%", duration: "12 months", link: "register-legacy.html", features: ["Estate-grade assets", "Annual payouts"] },
+    { name: "Global Investor", roi: "Custom", duration: "12 months", link: "register-global.html", features: ["Diversified global portfolio", "Tailored strategy"] },
+    { name: "Enterprise", roi: "Tailored", duration: "Corporate use", link: "register-enterprise.html", features: ["Portfolio optimization", "Dedicated advisory"] },
   ];
 
   const plansContainer = document.getElementById("plansContainer");
@@ -196,7 +196,7 @@
         <ul class="flex-1 text-left mb-4">
           ${plan.features.map(f => `<li class="before:content-['✓'] before:text-green-600 before:mr-2">${f}</li>`).join('')}
         </ul>
-        <button class="mt-auto bg-green-600 text-white py-2 rounded hover:bg-green-700 transition">Select Plan</button>
+        <a href="${plan.link}" class="mt-auto text-center bg-green-600 text-white py-2 rounded hover:bg-green-700 transition">Select Plan</a>
       </div>`;
   });
     const projects = [
