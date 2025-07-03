@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -9,66 +8,75 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <style>
+    .digital-text {
+      font-family: 'Courier New', Courier, monospace;
+      letter-spacing: 0.5px;
+    }
+  </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
-
-  <!-- HEADER -->
-  <header class="bg-white shadow sticky top-0 z-50">
+<body class="bg-gray-50 text-gray-800">  <!-- HEADER -->  <header class="bg-white shadow sticky top-0 z-50">
     <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
       <a href="index.html" class="text-2xl font-bold text-green-700">Novareal Capital</a>
       <a href="index.html#plans" class="text-sm text-green-600 hover:underline">← Back to Plans</a>
     </div>
-  </header>
+  </header>  <!-- FORM SECTION -->  <section class="py-16 px-4" data-aos="fade-up">
+    <div class="max-w-2xl mx-auto bg-white p-10 rounded-2xl shadow-xl border border-green-100">
+      <h1 class="text-4xl font-extrabold text-green-700 mb-4 text-center digital-text">Starter Plan</h1>
+      <p class="mb-6 text-gray-600 text-center text-lg">Begin your global investment journey with Novareal Capital.</p><form action="https://formspree.io/f/your_form_id" method="POST" class="space-y-6">
+    <input type="hidden" name="Plan" value="Starter">
 
-  <!-- FORM SECTION -->
-  <section class="py-16 px-4" data-aos="fade-up">
-    <div class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-md">
-      <h1 class="text-3xl font-bold text-green-700 mb-6 text-center">Starter Plan Registration</h1>
-      <p class="mb-6 text-gray-600 text-center">Begin your investment journey with our flexible Starter plan. Fill in your details to get started.</p>
-
-      <form action="https://formspree.io/f/your_form_id" method="POST" class="space-y-6">
-        <input type="hidden" name="Plan" value="Starter">
-
-        <div>
-          <label class="block text-sm font-medium mb-1">Full Name <span class="text-red-500">*</span></label>
-          <input name="name" type="text" required class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-green-600">
-        </div>
-
-        <div>
-          <label class="block text-sm font-medium mb-1">Email Address <span class="text-red-500">*</span></label>
-          <input name="email" type="email" required class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-green-600">
-        </div>
-
-        <div>
-          <label class="block text-sm font-medium mb-1">Phone Number</label>
-          <input name="phone" type="tel" class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-green-600">
-        </div>
-
-        <div>
-          <label class="block text-sm font-medium mb-1">Country</label>
-          <input name="country" type="text" class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-green-600">
-        </div>
-
-        <button type="submit" class="w-full bg-green-700 hover:bg-green-800 text-white font-semibold py-3 px-6 rounded-lg transition duration-300">
-          Submit Registration
-        </button>
-      </form>
-
-      <p class="mt-6 text-sm text-center text-gray-500">
-        Already registered? <a href="index.html#login" class="text-green-600 underline">Log in here</a>.
-      </p>
+    <div>
+      <label class="block text-sm font-medium mb-1">Full Name <span class="text-red-500">*</span></label>
+      <input name="name" type="text" required class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-green-600">
     </div>
-  </section>
 
-  <!-- FOOTER -->
-  <footer class="bg-gray-100 py-8 text-center text-sm text-gray-500">
+    <div>
+      <label class="block text-sm font-medium mb-1">Email Address <span class="text-red-500">*</span></label>
+      <input name="email" type="email" required class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-green-600">
+    </div>
+
+    <div>
+      <label class="block text-sm font-medium mb-1">Phone Number</label>
+      <input name="phone" type="tel" class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-green-600">
+    </div>
+
+    <div>
+      <label class="block text-sm font-medium mb-1">Country</label>
+      <input name="country" type="text" class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-green-600">
+    </div>
+
+    <div class="flex items-start">
+      <input type="checkbox" required id="terms" class="mt-1 mr-2">
+      <label for="terms" class="text-sm text-gray-600">I agree to the <a href="#" class="text-green-600 underline">terms and conditions</a>.</label>
+    </div>
+
+    <button type="submit" class="w-full bg-green-700 hover:bg-green-800 text-white font-semibold py-3 px-6 rounded-lg transition duration-300">
+      Register Now
+    </button>
+  </form>
+
+  <div class="mt-6 text-center">
+    <p class="text-sm text-gray-500">Already registered? <a href="login.html" class="text-green-600 underline">Login here</a>.</p>
+  </div>
+</div>
+
+  </section>  <!-- FOOTER -->  <footer class="bg-gray-100 py-8 text-center text-sm text-gray-500">
     &copy; 2025 Novareal Capital. All rights reserved.
-  </footer>
+  </footer>  <!-- EMAIL VERIFICATION MOCK -->  <script>
+    const form = document.querySelector('form');
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
 
-  <!-- AOS Init -->
-  <script>
+      const email = form.email.value;
+      const name = form.name.value;
+
+      // Simulate verification message
+      alert(`A verification link has been sent to ${email}. Please check your inbox to complete your registration.`);
+
+      form.reset();
+    });
+  </script>  <script>
     AOS.init();
-  </script>
-
-</body>
+  </script></body>
 </html>
