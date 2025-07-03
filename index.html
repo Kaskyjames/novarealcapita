@@ -73,4 +73,53 @@
       </form>
       <div>
         <p class="mb-4">Address: 4900 California Ave, Bakersfield, CA 93309, USA</p>
-        <iframe class="w-full h-64 rounded" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3308.741462016487!2d-119.0636351241941!3d35.36986055227864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f
+        <iframe class="w-full h-64 rounded" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3308.741462016487!2d-119.0636351241941!3d35.36986055227864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80ea6a409ec39adf%3A0xc58f7b17e51d7b31!2s4900%20California%20Ave%2C%20Bakersfield%2C%20CA%2093309%2C%20USA!5e0!3m2!1sen!2s!4v1719949161111!5m2!1sen!2s" loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+</section><!-- FOOTER --><footer class="bg-gray-900 text-white py-8 px-4">
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+    <div>&copy; 2025 Novareal Capital. All rights reserved.</div>
+    <div class="flex space-x-4">
+      <a href="#" class="hover:text-green-400">Privacy</a>
+      <a href="#" class="hover:text-green-400">LinkedIn</a>
+      <a href="#" class="hover:text-green-400">Instagram</a>
+    </div>
+  </div>
+</footer><!-- FLOATING ACTION BUTTON --><div class="fixed bottom-5 right-5">
+  <a href="#contact" class="bg-green-700 text-white px-4 py-3 rounded-full shadow-lg">Request a Call</a>
+</div><!-- JS & AOS --><script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script><script>AOS.init();</script><script>
+  const plans = [
+    { name: "Starter", roi: "12%", duration: "6 months" },
+    { name: "Growth", roi: "18%", duration: "12 months" },
+    { name: "Legacy", roi: "22%", duration: "24 months" },
+    { name: "Global Investor", roi: "Custom", duration: "Long-Term" },
+    { name: "Platinum Access", roi: "28%", duration: "36 months" },
+  ];
+  const projects = [
+    { title: "Victoria Island Towers", status: "Ongoing", image: "project1.jpg" },
+    { title: "Palm Heights", status: "Upcoming", image: "project2.jpg" },
+    { title: "Bayview Estate", status: "Sold", image: "project3.jpg" },
+  ];
+  const testimonials = [
+    "\u201cNovareal helped me grow my money while I lived abroad. Total trust.\u201d — Ada, Toronto",
+    "\u201cBest ROI experience ever. Safe, simple, honest.\u201d — James, LA",
+    "\u201cThe diaspora team is amazing and responsive!\u201d — Sophia, London",
+  ];
+
+  const plansContainer = document.getElementById('plans-container');
+  plans.forEach(p => {
+    plansContainer.innerHTML += `<div class='border p-6 rounded-lg shadow' data-aos='zoom-in'><h3 class='text-xl font-semibold'>${p.name}</h3><p class='mt-2'>ROI: ${p.roi} | Duration: ${p.duration}</p></div>`;
+  });
+
+  const projectsContainer = document.getElementById('projects-container');
+  projects.forEach(p => {
+    projectsContainer.innerHTML += `<div class='bg-white shadow rounded overflow-hidden' data-aos='fade-up'><img src='${p.image}' alt='${p.title}' class='w-full h-48 object-cover'><div class='p-4'><h4 class='font-semibold'>${p.title}</h4><p class='text-green-700'>Status: ${p.status}</p></div></div>`;
+  });
+
+  const testimonialsContainer = document.getElementById('testimonials-container');
+  testimonials.forEach(t => {
+    testimonialsContainer.innerHTML += `<div class='bg-gray-100 p-4 rounded shadow' data-aos='fade-in'>${t}</div>`;
+  });
+</script></body>
+</html>
