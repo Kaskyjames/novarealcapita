@@ -2,124 +2,138 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Novareal Capital – Premium Real Estate Investments</title>
-  <meta name="description" content="Premium real estate investment opportunities in Bakersfield, California, for diaspora, institutional, and luxury investors." />
+  <title>Novareal Capital – International Real Estate Investments</title>
+  <meta name="description" content="Novareal Capital is a global real estate investment company offering trusted, high-return investment opportunities for diaspora and foreign investors." />
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
-<body class="bg-white text-gray-900"><!-- HEADER --><header class="sticky top-0 z-50 bg-white shadow-md">
-  <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
-    <div class="text-xl font-bold text-green-700">Novareal Capital</div>
-    <nav class="space-x-6 hidden md:block">
-      <a href="#" class="hover:text-green-600">Home</a>
-      <a href="#about" class="hover:text-green-600">About</a>
-      <a href="#services" class="hover:text-green-600">Services</a>
-      <a href="#projects" class="hover:text-green-600">Projects</a>
-      <a href="#blog" class="hover:text-green-600">Blog</a>
-      <a href="#contact" class="hover:text-green-600">Contact</a>
-      <a href="#login" class="text-green-700 font-semibold">Login</a>
-    </nav>
-  </div>
-</header><!-- HERO --><section class="relative h-screen flex items-center justify-center text-white bg-black">
-  <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover opacity-60">
-    <source src="luxury-properties.mp4" type="video/mp4">
-  </video>
-  <div class="z-10 text-center px-4" data-aos="fade-up">
-    <h1 class="text-4xl md:text-6xl font-bold mb-4">Premium Real Estate Investments</h1>
-    <p class="text-lg mb-6">Bakersfield, CA – Secure, Transparent, Global Growth.</p>
-    <div class="space-x-4">
-      <a href="#plans" class="bg-green-600 hover:bg-green-700 px-6 py-3 rounded-lg">Explore Investments</a>
-      <a href="#contact" class="bg-white text-green-700 hover:bg-gray-200 px-6 py-3 rounded-lg">Book Strategy Call</a>
+<body class="bg-white text-gray-900">  <!-- HEADER -->  <header class="sticky top-0 z-50 bg-white shadow-md">
+    <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
+      <div class="text-xl font-bold text-green-700">Novareal Capital</div>
+      <nav class="space-x-6 hidden md:block">
+        <a href="#" class="hover:text-green-600">Home</a>
+        <a href="#about" class="hover:text-green-600">About</a>
+        <a href="#services" class="hover:text-green-600">Services</a>
+        <a href="#projects" class="hover:text-green-600">Projects</a>
+        <a href="#blog" class="hover:text-green-600">Blog</a>
+        <a href="#contact" class="hover:text-green-600">Contact</a>
+        <a href="#login" class="text-green-700 font-semibold">Login</a>
+      </nav>
     </div>
-  </div>
-</section><!-- ABOUT --><section id="about" class="max-w-7xl mx-auto py-16 px-4">
-  <h2 class="text-3xl font-bold mb-6" data-aos="fade-right">Who We Are</h2>
-  <p class="mb-4">Novareal Capital connects global investors to high-return properties in California. We lead with trust, innovation, and impact — tailored to diaspora and institutional investors.</p>
-</section><!-- SERVICES --><section id="services" class="bg-gray-50 py-16 px-4">
-  <div class="max-w-7xl mx-auto">
-    <h2 class="text-3xl font-bold mb-8" data-aos="fade-up">Our Services</h2>
-    <div class="grid md:grid-cols-4 gap-6">
-      <div class="bg-white p-6 shadow rounded-lg" data-aos="zoom-in">Real Estate Development</div>
-      <div class="bg-white p-6 shadow rounded-lg" data-aos="zoom-in">Land Banking</div>
-      <div class="bg-white p-6 shadow rounded-lg" data-aos="zoom-in">Diaspora Advisory</div>
-      <div class="bg-white p-6 shadow rounded-lg" data-aos="zoom-in">Investment Planning</div>
-    </div>
-  </div>
-</section><!-- INVESTMENT PLANS (DYNAMIC) --><section id="plans" class="py-16 px-4">
-  <div class="max-w-7xl mx-auto text-center">
-    <h2 class="text-3xl font-bold mb-8" data-aos="fade-up">Investment Plans</h2>
-    <div id="plans-container" class="grid md:grid-cols-5 gap-6"></div>
-  </div>
-</section><!-- FEATURED PROJECTS (DYNAMIC) --><section id="projects" class="bg-gray-100 py-16 px-4">
-  <div class="max-w-7xl mx-auto">
-    <h2 class="text-3xl font-bold mb-8" data-aos="fade-up">Featured Projects</h2>
-    <div id="projects-container" class="grid md:grid-cols-3 gap-6"></div>
-  </div>
-</section><!-- TESTIMONIALS (DYNAMIC) --><section class="py-16 px-4">
-  <div class="max-w-4xl mx-auto text-center">
-    <h2 class="text-3xl font-bold mb-8" data-aos="fade-up">What Our Clients Say</h2>
-    <div id="testimonials-container" class="grid gap-4"></div>
-  </div>
-</section><!-- CONTACT + MAP --><section id="contact" class="py-16 px-4">
-  <div class="max-w-5xl mx-auto">
-    <h2 class="text-3xl font-bold mb-8" data-aos="fade-up">Contact Us</h2>
-    <div class="grid md:grid-cols-2 gap-6">
-      <form class="grid gap-4">
-        <input type="text" placeholder="Full Name" class="p-3 border rounded" />
-        <input type="email" placeholder="Email Address" class="p-3 border rounded" />
-        <textarea placeholder="Your Message" rows="4" class="p-3 border rounded"></textarea>
-        <button class="bg-green-700 text-white py-3 rounded">Send Message</button>
-      </form>
-      <div>
-        <p class="mb-4">Address: 4900 California Ave, Bakersfield, CA 93309, USA</p>
-        <iframe class="w-full h-64 rounded" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3308.741462016487!2d-119.0636351241941!3d35.36986055227864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80ea6a409ec39adf%3A0xc58f7b17e51d7b31!2s4900%20California%20Ave%2C%20Bakersfield%2C%20CA%2093309%2C%20USA!5e0!3m2!1sen!2s!4v1719949161111!5m2!1sen!2s" loading="lazy"></iframe>
+  </header>  <!-- HERO -->  <section class="relative h-screen flex items-center justify-center text-white bg-black">
+    <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover opacity-60">
+      <source src="luxury-properties.mp4" type="video/mp4">
+    </video>
+    <div class="z-10 text-center px-4" data-aos="fade-up">
+      <h1 class="text-4xl md:text-6xl font-bold mb-4">Global Real Estate Investments</h1>
+      <p class="text-lg mb-6">For Individuals, Companies & Organizations – Worldwide</p>
+      <div class="space-x-4">
+        <a href="#plans" class="bg-green-600 hover:bg-green-700 px-6 py-3 rounded-lg">Explore Investments</a>
+        <a href="#contact" class="bg-white text-green-700 hover:bg-gray-200 px-6 py-3 rounded-lg">Book Strategy Call</a>
       </div>
     </div>
-  </div>
-</section><!-- FOOTER --><footer class="bg-gray-900 text-white py-8 px-4">
-  <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-    <div>&copy; 2025 Novareal Capital. All rights reserved.</div>
-    <div class="flex space-x-4">
-      <a href="#" class="hover:text-green-400">Privacy</a>
-      <a href="#" class="hover:text-green-400">LinkedIn</a>
-      <a href="#" class="hover:text-green-400">Instagram</a>
+  </section>  <!-- ABOUT -->  <section id="about" class="max-w-7xl mx-auto py-16 px-4" data-aos="fade-up">
+    <h2 class="text-3xl font-bold mb-6">Who We Are</h2>
+    <p class="mb-4">Novareal Capital is an international real estate investment company with headquarters in Bakersfield, California, USA. We serve diaspora and foreign investors across America, Europe, Asia, and beyond — including individuals, corporations, and organizations.</p>
+    <p class="mb-4">With a trusted track record since 2020, Novareal offers secure, high-return investment plans supported by a global team of property experts and advisors.</p>
+  </section>  <!-- SERVICES -->  <section id="services" class="bg-gray-50 py-16 px-4" data-aos="fade-up">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-3xl font-bold mb-8">Our Services</h2>
+      <div class="grid md:grid-cols-4 gap-6">
+        <div class="bg-white p-6 shadow rounded-lg">Real Estate Development</div>
+        <div class="bg-white p-6 shadow rounded-lg">Land Banking</div>
+        <div class="bg-white p-6 shadow rounded-lg">Diaspora Advisory</div>
+        <div class="bg-white p-6 shadow rounded-lg">Investment Planning</div>
+      </div>
     </div>
-  </div>
-</footer><!-- FLOATING ACTION BUTTON --><div class="fixed bottom-5 right-5">
-  <a href="#contact" class="bg-green-700 text-white px-4 py-3 rounded-full shadow-lg">Request a Call</a>
-</div><!-- JS & AOS --><script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script><script>AOS.init();</script><script>
-  const plans = [
-    { name: "Starter", roi: "12%", duration: "6 months" },
-    { name: "Growth", roi: "18%", duration: "12 months" },
-    { name: "Legacy", roi: "22%", duration: "24 months" },
-    { name: "Global Investor", roi: "Custom", duration: "Long-Term" },
-    { name: "Platinum Access", roi: "28%", duration: "36 months" },
-  ];
-  const projects = [
-    { title: "Victoria Island Towers", status: "Ongoing", image: "project1.jpg" },
-    { title: "Palm Heights", status: "Upcoming", image: "project2.jpg" },
-    { title: "Bayview Estate", status: "Sold", image: "project3.jpg" },
-  ];
-  const testimonials = [
-    "\u201cNovareal helped me grow my money while I lived abroad. Total trust.\u201d — Ada, Toronto",
-    "\u201cBest ROI experience ever. Safe, simple, honest.\u201d — James, LA",
-    "\u201cThe diaspora team is amazing and responsive!\u201d — Sophia, London",
-  ];
+  </section>  <!-- INVESTMENT PLANS -->  <section id="plans" class="py-16 px-4" data-aos="fade-up">
+    <div class="max-w-7xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-8">Investment Plans</h2>
+      <div id="plansContainer" class="grid md:grid-cols-5 gap-6"></div>
+    </div>
+  </section>  <!-- FEATURED PROJECTS -->  <section id="projects" class="bg-gray-100 py-16 px-4" data-aos="fade-up">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-3xl font-bold mb-8">Featured Projects</h2>
+      <div id="projectsContainer" class="grid md:grid-cols-3 gap-6"></div>
+    </div>
+  </section>  <!-- TESTIMONIALS -->  <section class="py-16 px-4" data-aos="fade-up">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-8">Client Testimonials</h2>
+      <div id="testimonialsContainer" class="space-y-6"></div>
+    </div>
+  </section>  <!-- MAP & ADDRESS -->  <section class="py-16 px-4" data-aos="fade-up">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
+      <div>
+        <h2 class="text-3xl font-bold mb-4">Global Presence</h2>
+        <p class="mb-2">Head Office: Bakersfield, California, United States</p>
+        <p class="mb-2">Agents and Offices: North America, Europe, Asia, Africa</p>
+        <p class="text-green-700">Connecting diaspora investors with premium properties globally.</p>
+      </div>
+      <iframe
+        class="w-full h-80 rounded-lg"
+        src="https://www.google.com/maps/embed/v1/place?key=YOUR_GOOGLE_MAPS_API_KEY&q=Bakersfield,California"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </section>  <!-- FOOTER -->  <footer class="bg-gray-900 text-white py-8 px-4">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+      <div>&copy; 2025 Novareal Capital. All rights reserved.</div>
+      <div class="flex space-x-4">
+        <a href="#" class="hover:text-green-400">Privacy</a>
+        <a href="#" class="hover:text-green-400">LinkedIn</a>
+        <a href="#" class="hover:text-green-400">Instagram</a>
+      </div>
+    </div>
+  </footer>  <!-- FLOATING ACTION BUTTON -->  <div class="fixed bottom-5 right-5">
+    <a href="#contact" class="bg-green-700 text-white px-4 py-3 rounded-full shadow-lg">Request a Call</a>
+  </div>  <!-- JS: AOS & Dynamic Content -->  <script>
+    AOS.init();
 
-  const plansContainer = document.getElementById('plans-container');
-  plans.forEach(p => {
-    plansContainer.innerHTML += `<div class='border p-6 rounded-lg shadow' data-aos='zoom-in'><h3 class='text-xl font-semibold'>${p.name}</h3><p class='mt-2'>ROI: ${p.roi} | Duration: ${p.duration}</p></div>`;
-  });
+    const plans = [
+      { name: "Starter", roi: "12%", duration: "6 months" },
+      { name: "Growth", roi: "18%", duration: "12 months" },
+      { name: "Legacy", roi: "22%", duration: "24 months" },
+      { name: "Global Investor", roi: "Custom", duration: "36+ months" },
+      { name: "Enterprise", roi: "Tailored", duration: "For Companies & Orgs" },
+    ];
+    const projects = [
+      { title: "Victoria Island Towers", image: "project1.jpg", status: "Ongoing" },
+      { title: "Accra Green Estate", image: "project2.jpg", status: "Upcoming" },
+      { title: "Dubai Marina Complex", image: "project3.jpg", status: "Sold" },
+    ];
+    const testimonials = [
+      "\u201cNovareal helped me grow my wealth while living abroad. Highly recommended!\u201d — Ada, Toronto",
+      "\u201cProfessional and trustworthy investment company.\u201d — James, London",
+      "\u201cPerfect for diaspora investors. I felt confident and supported.\u201d — Kunle, Dubai"
+    ];
 
-  const projectsContainer = document.getElementById('projects-container');
-  projects.forEach(p => {
-    projectsContainer.innerHTML += `<div class='bg-white shadow rounded overflow-hidden' data-aos='fade-up'><img src='${p.image}' alt='${p.title}' class='w-full h-48 object-cover'><div class='p-4'><h4 class='font-semibold'>${p.title}</h4><p class='text-green-700'>Status: ${p.status}</p></div></div>`;
-  });
+    const plansContainer = document.getElementById("plansContainer");
+    plans.forEach(plan => {
+      plansContainer.innerHTML += `
+        <div class="border p-6 rounded-lg shadow">
+          <h3 class="text-xl font-semibold">${plan.name}</h3>
+          <p class="mt-2">ROI: ${plan.roi}</p>
+          <p class="mt-1">Duration: ${plan.duration}</p>
+        </div>`;
+    });
 
-  const testimonialsContainer = document.getElementById('testimonials-container');
-  testimonials.forEach(t => {
-    testimonialsContainer.innerHTML += `<div class='bg-gray-100 p-4 rounded shadow' data-aos='fade-in'>${t}</div>`;
-  });
-</script></body>
+    const projectsContainer = document.getElementById("projectsContainer");
+    projects.forEach(project => {
+      projectsContainer.innerHTML += `
+        <div class="bg-white shadow rounded overflow-hidden">
+          <img src="${project.image}" alt="${project.title}" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h4 class="font-semibold">${project.title}</h4>
+            <p class="text-green-700">Status: ${project.status}</p>
+          </div>
+        </div>`;
+    });
+
+    const testimonialsContainer = document.getElementById("testimonialsContainer");
+    testimonials.forEach(text => {
+      testimonialsContainer.innerHTML += `<div class="italic text-lg">${text}</div>`;
+    });
+  </script></body>
 </html>
