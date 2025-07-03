@@ -3,23 +3,83 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Enterprise Plan – Register | Novareal Capital</title>
-  <link href="https://cdn.tailwindcss.com" rel="stylesheet" />
+  <title>Register – Enterprise Plan | Novareal Capital</title>
+  <meta name="description" content="Apply for Novareal Capital’s Enterprise Plan. Designed for corporate entities, institutions, and family offices requiring custom advisory and large-scale investment solutions.">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body class="bg-gray-50 text-gray-800">
-  <div class="max-w-2xl mx-auto px-6 py-12">
-    <h1 class="text-3xl font-bold text-green-700 mb-6">Enterprise Registration</h1>
-    <form action="https://formspree.io/f/your_form_id" method="POST" enctype="multipart/form-data" class="space-y-6 bg-white p-6 rounded-lg shadow">
-      <input type="hidden" name="Plan" value="Enterprise">
-      <div><label class="block mb-1">Company Name</label><input name="company" required class="w-full border p-3 rounded"></div>
-      <div><label class="block mb-1">Contact Person</label><input name="contact_name" class="w-full border p-3 rounded"></div>
-      <div><label class="block mb-1">Email</label><input name="email" type="email" required class="w-full border p-3 rounded"></div>
-      <div><label class="block mb-1">Phone</label><input name="phone" class="w-full border p-3 rounded"></div>
-      <div><label class="block mb-1">Corporate Document Upload (PDF)</label><input name="corporate_file" type="file" accept="application/pdf" class="w-full p-2 border rounded bg-white"></div>
-      <div><label class="block mb-1">Additional Notes</label><textarea name="notes" rows="4" class="w-full border p-3 rounded"></textarea></div>
-      <button class="bg-green-700 text-white py-3 px-6 rounded hover:bg-green-800 w-full">Submit Corporate Application</button>
-    </form>
-    <p class="mt-4 text-sm text-center">Back to <a href="index.html#plans" class="underline text-green-700">Plans</a></p>
-  </div>
+
+  <!-- HEADER -->
+  <header class="bg-white shadow sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="index.html" class="text-2xl font-bold text-green-700">Novareal Capital</a>
+      <a href="index.html#plans" class="text-sm text-green-600 hover:underline">← Back to Plans</a>
+    </div>
+  </header>
+
+  <!-- FORM SECTION -->
+  <section class="py-16 px-4" data-aos="fade-up">
+    <div class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-md">
+      <h1 class="text-3xl font-bold text-green-700 mb-6 text-center">Enterprise Plan Registration</h1>
+      <p class="mb-6 text-center text-gray-600">For companies, institutions, and family offices seeking bespoke advisory and portfolio structuring.</p>
+
+      <form action="https://formspree.io/f/your_form_id" method="POST" enctype="multipart/form-data" class="space-y-6">
+        <input type="hidden" name="Plan" value="Enterprise">
+
+        <div>
+          <label class="block text-sm font-medium mb-1">Company Name <span class="text-red-500">*</span></label>
+          <input name="company" type="text" required class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-green-600">
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium mb-1">Contact Person</label>
+          <input name="contact_name" type="text" class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-green-600">
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium mb-1">Email Address <span class="text-red-500">*</span></label>
+          <input name="email" type="email" required class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-green-600">
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium mb-1">Phone Number</label>
+          <input name="phone" type="tel" class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-green-600">
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium mb-1">Upload Corporate Document (PDF)</label>
+          <input name="corporate_file" type="file" accept="application/pdf" class="w-full p-3 border border-gray-300 rounded-lg bg-white file:mr-4 file:py-2 file:px-4 file:border-0 file:text-sm file:bg-green-100 file:text-green-700 file:rounded-lg">
+          <p class="text-xs text-gray-500 mt-1">Submit company certificate, incorporation papers, or legal memorandum (PDF only).</p>
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium mb-1">Additional Notes</label>
+          <textarea name="notes" rows="4" class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-green-600"></textarea>
+        </div>
+
+        <button type="submit" class="w-full bg-green-700 hover:bg-green-800 text-white font-semibold py-3 px-6 rounded-lg transition duration-300">
+          Submit Corporate Application
+        </button>
+      </form>
+
+      <p class="mt-6 text-sm text-center text-gray-500">
+        Questions? <a href="#contact" class="text-green-600 underline">Contact our Enterprise Team</a>.
+      </p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-100 py-8 text-center text-sm text-gray-500">
+    &copy; 2025 Novareal Capital. All rights reserved.
+  </footer>
+
+  <!-- AOS Init -->
+  <script>
+    AOS.init();
+  </script>
+
 </body>
 </html>
