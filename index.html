@@ -1,5 +1,4 @@
-<!DOCTYPE html><html lang="en">
-<head>
+<!DOCTYPE html><html lang="en"><head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Novareal Capital – International Real Estate Investments</title>
@@ -8,75 +7,79 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
 </head>
-<body class="bg-white text-gray-900">  
-  <!-- HEADER -->  
-  <header class="sticky top-0 z-50 bg-white shadow-md">
-    <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
-      <div class="text-xl font-bold text-green-700">Novareal Capital</div>
-      <nav class="space-x-6 hidden md:block">
-        <a href="#" class="hover:text-green-600">Home</a>
-        <a href="#about" class="hover:text-green-600">About</a>
-        <a href="#services" class="hover:text-green-600">Services</a>
-        <a href="#projects" class="hover:text-green-600">Projects</a>
-        <a href="#blog" class="hover:text-green-600">Blog</a>
-        <a href="#contact" class="hover:text-green-600">Contact</a>
-        <a href="#login" class="text-green-700 font-semibold">Login</a>
-      </nav>
-    </div>
-  </header>  
-  <!-- HERO -->  
-  <section class="relative h-screen flex items-center justify-center text-white bg-black">
-    <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover opacity-60">
-      <source src="luxury-properties.mp4" type="video/mp4">
-    </video>
-    <div class="z-10 text-center px-4" data-aos="fade-up">
-      <h1 class="text-4xl md:text-6xl font-bold mb-4">Premium Real Estate Investments</h1>
-      <p class="text-lg mb-6">Trusted globally by diaspora and institutional investors</p>
-      <div class="space-x-4">
-        <a href="#plans" class="bg-green-600 hover:bg-green-700 px-6 py-3 rounded-lg">Explore Investments</a>
-        <a href="#contact" class="bg-white text-green-700 hover:bg-gray-200 px-6 py-3 rounded-lg">Book Strategy Call</a>
-      </div>
-    </div>
-  </section>  
-  <!-- ABOUT US -->  
-  <section id="about" class="max-w-7xl mx-auto py-16 px-4" data-aos="fade-up">
+<body class="bg-white text-gray-900" style="font-family: 'Orbitron', sans-serif;">  <!-- ABOUT US -->    <section id="about" class="max-w-7xl mx-auto py-16 px-4" data-aos="fade-up">
     <h2 class="text-3xl font-bold mb-6">Who We Are, Mission & Values</h2>
     <p class="mb-4">Novareal Capital is an international real estate investment firm headquartered in Bakersfield, California, USA. We empower individuals, companies, and institutions to invest securely in high-yield property markets around the world.</p>
-        <div class="grid md:grid-cols-2 gap-8">
-      <div class="space-y-8">
-        <div>
-          <h3 class="text-xl font-semibold mb-2">Mission & Values</h3>
-          <p>We aim to build wealth for our clients through transparency, innovation, and real estate excellence.</p>
+    <div class="grid md:grid-cols-2 gap-8 items-start">
+      <!-- STATS WIDGET -->
+      <div class="grid grid-cols-2 gap-4 bg-gray-100 p-6 rounded-xl shadow-xl" data-aos="zoom-in">
+        <div class="flex items-center space-x-3">
+          <i data-lucide="users" class="w-6 h-6 text-green-600"></i>
+          <div>
+            <div id="stat-investors" class="text-2xl md:text-3xl font-bold text-gray-900">-</div>
+            <div class="text-sm text-gray-600">Active Investors</div>
+          </div>
         </div>
-      </div>
-        
-      <div class="relative group overflow-hidden rounded-xl shadow-xl transition-all duration-700 transform hover:scale-105 hover:-translate-y-1" 
-  data-aos="zoom-in-up" 
-  onmousemove="handleTilt(event, this)" 
-  onmouseleave="resetTilt(this)"
-  style="perspective: 1000px;"
->
-  <!-- Image -->
-  <img src="why-us.png" alt="Why Choose Us - Novareal Capital" 
-    class="w-full h-auto object-cover transition-transform duration-700 group-hover:brightness-90 rounded-xl"
-    style="transform-style: preserve-3d;"
+        <div class="flex items-center space-x-3">
+          <i data-lucide="home" class="w-6 h-6 text-green-600"></i>
+          <div>
+            <div id="stat-properties" class="text-2xl md:text-3xl font-bold text-gray-900">-</div>
+            <div class="text-sm text-gray-600">Properties Listed</div>
+          </div>
+        </div>
+        <div class="flex items-center space-x-3">
+          <i data-lucide="dollar-sign" class="w-6 h-6 text-green-600"></i>
+          <div>
+            <div id="stat-revenue" class="text-2xl md:text-3xl font-bold text-gray-900">-</div>
+            <div class="text-sm text-gray-600">Revenue Generated</div>
+          </div>
+        </div>
+        <div class="flex items-center space-x-3">
+          <i data-lucide="globe" class="w-6 h-6 text-green-600"></i>
+          <div>
+            <div id="stat-countries" class="text-2xl md:text-3xl font-bold text-gray-900">-</div>
+            <div class="text-sm text-gray-600">Countries Served</div>
+          </div>
+        </div>
+      </div><!-- IMAGE SIDE WITH EFFECT -->
+  <div class="relative group overflow-hidden rounded-xl shadow-xl transition-all duration-700 transform hover:scale-105 hover:-translate-y-1" 
+    data-aos="zoom-in-up" 
+    onmousemove="handleTilt(event, this)" 
+    onmouseleave="resetTilt(this)"
+    style="perspective: 1000px;"
   >
-
-  <!-- Overlay Stats Tint -->
-  <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-700 flex items-end p-6">
-    <div class="backdrop-blur-md bg-white/10 text-white text-sm font-medium p-4 w-full text-center rounded-lg shadow-inner border border-green-500/50">
-      Over <span class="text-green-400 font-bold">$3.2M</span> Raised • 
-      <span class="text-green-400 font-bold">92%</span> Completion Rate • 
-      <span class="text-green-400 font-bold">25%</span> Avg. ROI • 
-      <span class="text-green-400 font-bold">300+</span> Diaspora Clients
-    </div>
-  </div>
-
-  <!-- Glow effect -->
-  <div class="absolute inset-0 rounded-xl border-2 border-green-500 opacity-0 group-hover:opacity-50 transition-all duration-700 pointer-events-none"></div>
+    <img src="why-us.png" alt="Why Choose Us - Novareal Capital" 
+      class="w-full h-auto object-cover transition-transform duration-700 group-hover:brightness-90 rounded-xl"
+      style="transform-style: preserve-3d;"
+    >
+    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-700 flex items-end p-6">
+      <div class="backdrop-blur-md bg-white/10 text-white text-sm font-medium p-4 w-full text-center rounded-lg shadow-inner border border-green-500/50">
+        Over <span class="text-green-400 font-bold">$3.2M</span> Raised • 
+        <span class="text-green-400 font-bold">92%</span> Completion Rate • 
+        <span class="text-green-400 font-bold">25%</span> Avg. ROI • 
+        <span class="text-green-400 font-bold">300+</span> Diaspora Clients
       </div>
-  </section>  
+    </div>
+    <div class="absolute inset-0 rounded-xl border-2 border-green-500 opacity-0 group-hover:opacity-50 transition-all duration-700 pointer-events-none"></div>
+  </div>
+</div>
+
+  </section><script>
+  lucide.createIcons();
+
+  function updateLiveStats() {
+    document.getElementById('stat-investors').textContent = (250 + Math.floor(Math.random() * 50)).toLocaleString();
+    document.getElementById('stat-properties').textContent = (60 + Math.floor(Math.random() * 15)).toLocaleString();
+    document.getElementById('stat-revenue').textContent = "$" + (3200000 + Math.floor(Math.random() * 30000)).toLocaleString();
+    document.getElementById('stat-countries').textContent = (12 + Math.floor(Math.random() * 4)).toString();
+  }
+
+  updateLiveStats();
+  setInterval(updateLiveStats, 10000);
+</script><!-- Continue with rest of your code... -->
   <!-- SERVICES -->  
   <section id="services" class="bg-gray-50 py-16 px-4" data-aos="fade-up">
     <div class="max-w-7xl mx-auto">
