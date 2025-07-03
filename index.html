@@ -133,17 +133,18 @@
   <!-- SCRIPTS -->  
   <script>
     AOS.init();
-    const plans = [
+
+  const plans = [
     { name: "Starter", roi: "10%", duration: "3 months", features: ["Low entry", "Quarterly payouts"] },
     { name: "Growth", roi: "15%", duration: "6 months", features: ["Balanced risk", "Bi-annual payouts"] },
     { name: "Legacy", roi: "18% - 20%", duration: "12 months", features: ["Estate-grade assets", "Annual payouts"] },
-    { name: "Global Investor", roi: "custom", duration: "12 months", features: ["Diversified global portfolio", "Tailored strategy"] },
+    { name: "Global Investor", roi: "Custom", duration: "12 months", features: ["Diversified global portfolio", "Tailored strategy"] },
     { name: "Enterprise", roi: "Tailored", duration: "Corporate use", features: ["Portfolio optimization", "Dedicated advisory"] },
   ];
 
-  const container = document.getElementById("plansContainer");
+  const plansContainer = document.getElementById("plansContainer");
   plans.forEach(plan => {
-    container.innerHTML += `
+    plansContainer.innerHTML += `
       <div class="border rounded-lg shadow hover:shadow-lg transition p-6 flex flex-col" data-aos="fade-up">
         <h3 class="text-xl font-semibold mb-2">${plan.name}</h3>
         <div class="text-3xl font-bold text-green-700">${plan.roi}</div>
@@ -164,16 +165,6 @@
       "\u201cProfessional and trustworthy investment company.\u201d — James, London",
       "\u201cPerfect for diaspora investors. I felt confident and supported.\u201d — Darik, Dubai"
     ];
-
-    const plansContainer = document.getElementById("plansContainer");
-    plans.forEach(plan => {
-      plansContainer.innerHTML += `
-        <div class="border p-6 rounded-lg shadow">
-          <h3 class="text-xl font-semibold">${plan.name}</h3>
-          <p class="mt-2">ROI: ${plan.roi}</p>
-          <p class="mt-1">Duration: ${plan.duration}</p>
-        </div>`;
-    });
 
     const projectsContainer = document.getElementById("projectsContainer");
     projects.forEach(project => {
