@@ -271,20 +271,6 @@
 updateLiveStats();
 setInterval(updateLiveStats, 10000);
 
-
-    // Simulated real-time dashboard data
-function updateLiveStats() {
-  document.getElementById('stat-investors').textContent = (250 + Math.floor(Math.random() * 50)).toLocaleString();
-  document.getElementById('stat-properties').textContent = (60 + Math.floor(Math.random() * 15)).toLocaleString();
-  document.getElementById('stat-revenue').textContent = "$" + (3_200_000 + Math.floor(Math.random() * 30000)).toLocaleString();
-  document.getElementById('stat-countries').textContent = (12 + Math.floor(Math.random() * 4)).toString();
-}
-
-// Initial load
-updateLiveStats();
-
-// Update every 10 seconds
-setInterval(updateLiveStats, 10000);
     
 
   const plans = [
