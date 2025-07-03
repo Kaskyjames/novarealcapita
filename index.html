@@ -75,6 +75,30 @@
   <div class="absolute inset-0 rounded-xl border-2 border-green-500 opacity-0 group-hover:opacity-50 transition-all duration-700 pointer-events-none"></div>
       </div>
   </section>  
+<!-- LIVE STATS WIDGET -->
+<section id="live-stats" class="bg-gray-50 py-12 px-4" data-aos="fade-up">
+  <div class="max-w-7xl mx-auto text-center">
+    <h2 class="text-2xl font-bold mb-6 text-green-700">Live Investment Dashboard</h2>
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-6">
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-md transition duration-300">
+        <p class="text-sm text-gray-500">Active Investors</p>
+        <div id="stat-investors" class="text-3xl font-bold text-green-700">...</div>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-md transition duration-300">
+        <p class="text-sm text-gray-500">Properties Available</p>
+        <div id="stat-properties" class="text-3xl font-bold text-green-700">...</div>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-md transition duration-300">
+        <p class="text-sm text-gray-500">Revenue Generated</p>
+        <div id="stat-revenue" class="text-3xl font-bold text-green-700">...</div>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-md transition duration-300">
+        <p class="text-sm text-gray-500">Global Reach</p>
+        <div id="stat-countries" class="text-3xl font-bold text-green-700">...</div>
+      </div>
+    </div>
+  </div>
+</section>
   <!-- SERVICES -->  
   <section id="services" class="bg-gray-50 py-16 px-4" data-aos="fade-up">
     <div class="max-w-7xl mx-auto">
@@ -201,6 +225,21 @@
   <!-- SCRIPTS -->  
   <script>
     AOS.init();
+
+    // Simulated real-time dashboard data
+function updateLiveStats() {
+  document.getElementById('stat-investors').textContent = (250 + Math.floor(Math.random() * 50)).toLocaleString();
+  document.getElementById('stat-properties').textContent = (60 + Math.floor(Math.random() * 15)).toLocaleString();
+  document.getElementById('stat-revenue').textContent = "$" + (3_200_000 + Math.floor(Math.random() * 30000)).toLocaleString();
+  document.getElementById('stat-countries').textContent = (12 + Math.floor(Math.random() * 4)).toString();
+}
+
+// Initial load
+updateLiveStats();
+
+// Update every 10 seconds
+setInterval(updateLiveStats, 10000);
+    
 
   const plans = [
     { name: "Starter", roi: "10%", duration: "3 months", link: "register-starter.html", features: ["Low entry", "Quarterly payouts"] },
