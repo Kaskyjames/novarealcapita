@@ -45,8 +45,39 @@
     <p class="mb-4">Novareal Capital is an international real estate investment firm headquartered in Bakersfield, California, USA. We empower individuals, companies, and institutions to invest securely in high-yield property markets around the world.</p>
         <p>We aim to build wealth for our clients through transparency, innovation, and real estate excellence.</p>
       </div>
-      <div 
-  class="relative group overflow-hidden rounded-xl shadow-xl transition-all duration-700 transform hover:scale-105 hover:-translate-y-1" 
+    <!-- LIVE STATS WIDGET -->
+        <div class="bg-gray-100 p-6 rounded-xl shadow space-y-4">
+          <div class="flex items-center space-x-3">
+            <i class="ph ph-users text-green-700 text-xl"></i>
+            <div>
+              <p class="text-sm text-gray-500">Active Investors</p>
+              <div id="stat-investors" class="text-xl font-bold text-green-700">...</div>
+            </div>
+          </div>
+          <div class="flex items-center space-x-3">
+            <i class="ph ph-buildings text-green-700 text-xl"></i>
+            <div>
+              <p class="text-sm text-gray-500">Properties Available</p>
+              <div id="stat-properties" class="text-xl font-bold text-green-700">...</div>
+            </div>
+          </div>
+          <div class="flex items-center space-x-3">
+            <i class="ph ph-currency-dollar text-green-700 text-xl"></i>
+            <div>
+              <p class="text-sm text-gray-500">Revenue Generated</p>
+              <div id="stat-revenue" class="text-xl font-bold text-green-700">...</div>
+            </div>
+          </div>
+          <div class="flex items-center space-x-3">
+            <i class="ph ph-globe-hemisphere-west text-green-700 text-xl"></i>
+            <div>
+              <p class="text-sm text-gray-500">Global Reach</p>
+              <div id="stat-countries" class="text-xl font-bold text-green-700">...</div>
+            </div>
+          </div>
+        </div>
+  </div>
+      <div class="relative group overflow-hidden rounded-xl shadow-xl transition-all duration-700 transform hover:scale-105 hover:-translate-y-1" 
   data-aos="zoom-in-up" 
   onmousemove="handleTilt(event, this)" 
   onmouseleave="resetTilt(this)"
