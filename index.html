@@ -62,22 +62,30 @@
         <div class="bg-white p-6 shadow rounded-lg">Investment Planning</div>
       </div>
     </div>
-  </section>  <!-- INVESTMENT PLANS (DYNAMIC) -->  <section id="plans" class="py-16 px-4" data-aos="fade-up">
-    <div class="max-w-7xl mx-auto text-center">
-      <h2 class="text-3xl font-bold mb-8">Investment Plans</h2>
-      <div id="plansContainer" class="grid md:grid-cols-5 gap-6"></div>
-    </div>
-  </section>  <!-- FEATURED PROJECTS (DYNAMIC) -->  <section id="projects" class="bg-gray-100 py-16 px-4" data-aos="fade-up">
+  </section>  
+  <!-- INVESTMENT PLANS (DYNAMIC) -->  
+<section id="plans" class="py-16 px-4 bg-white" data-aos="fade-up">
+  <div class="max-w-7xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-8">Investment Plans</h2>
+    <div id="plansContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6"></div>
+  </div>
+</section>  
+  <!-- FEATURED PROJECTS (DYNAMIC) -->  
+  <section id="projects" class="bg-gray-100 py-16 px-4" data-aos="fade-up">
     <div class="max-w-7xl mx-auto">
       <h2 class="text-3xl font-bold mb-8">Featured Projects</h2>
       <div id="projectsContainer" class="grid md:grid-cols-3 gap-6"></div>
     </div>
-  </section>  <!-- TESTIMONIALS -->  <section class="py-16 px-4" data-aos="fade-up">
+  </section>  
+  <!-- TESTIMONIALS -->  
+  <section class="py-16 px-4" data-aos="fade-up">
     <div class="max-w-4xl mx-auto text-center">
       <h2 class="text-3xl font-bold mb-8">What Our Clients Say</h2>
       <div id="testimonialsContainer" class="space-y-6"></div>
     </div>
-  </section>  <!-- NEWSLETTER SUBSCRIPTION -->  <section class="bg-green-700 text-white py-16 px-4" data-aos="fade-up">
+  </section>  
+  <!-- NEWSLETTER SUBSCRIPTION -->  
+  <section class="bg-green-700 text-white py-16 px-4" data-aos="fade-up">
     <div class="max-w-3xl mx-auto text-center">
       <h2 class="text-2xl font-bold mb-4">Subscribe for Investment Insights</h2>
       <form class="flex flex-col md:flex-row justify-center gap-4">
@@ -86,7 +94,9 @@
       </form>
       <p class="text-sm mt-2">We respect your privacy. <a href="#" class="underline">Privacy Policy</a></p>
     </div>
-  </section>  <!-- CONTACT & MAP -->  <section id="contact" class="py-16 px-4" data-aos="fade-up">
+  </section>  
+  <!-- CONTACT & MAP -->  
+  <section id="contact" class="py-16 px-4" data-aos="fade-up">
     <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
       <div>
         <h2 class="text-3xl font-bold mb-4">Contact Us</h2>
@@ -102,7 +112,9 @@
       </div>
       <iframe class="w-full h-80 rounded-lg" src="https://www.google.com/maps/embed/v1/place?key=YOUR_GOOGLE_MAPS_API_KEY&q=Bakersfield,California" allowfullscreen></iframe>
     </div>
-  </section>  <!-- FOOTER -->  <footer class="bg-gray-900 text-white py-8 px-4">
+  </section>  
+  <!-- FOOTER -->  
+  <footer class="bg-gray-900 text-white py-8 px-4">
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
       <div>&copy; 2025 Novareal Capital. All rights reserved.</div>
       <div class="flex space-x-4">
@@ -111,19 +123,37 @@
         <a href="#" class="hover:text-green-400">Instagram</a>
       </div>
     </div>
-  </footer>  <!-- FLOATING BUTTON -->  <div class="fixed bottom-5 right-5 flex flex-col space-y-3">
+  </footer>  
+  <!-- FLOATING BUTTON -->  
+  <div class="fixed bottom-5 right-5 flex flex-col space-y-3">
     <a href="#contact" class="bg-green-700 text-white px-4 py-3 rounded-full shadow-lg">Request a Call</a>
     <a href="#plans" class="bg-white text-green-700 px-4 py-3 rounded-full shadow-lg border">Start Investing</a>
     <a href="#login" class="bg-green-600 text-white px-4 py-3 rounded-full shadow-lg">Log In</a>
-  </div>  <!-- SCRIPTS -->  <script>
+  </div>  
+  <!-- SCRIPTS -->  
+  <script>
     AOS.init();
     const plans = [
-      { name: "Starter", roi: "12%", duration: "6 months" },
-      { name: "Growth", roi: "18%", duration: "12 months" },
-      { name: "Legacy", roi: "22%", duration: "24 months" },
-      { name: "Global Investor", roi: "Custom", duration: "36+ months" },
-      { name: "Enterprise", roi: "Tailored", duration: "For Companies & Orgs" },
-    ];
+    { name: "Starter", roi: "10%", duration: "3 months", features: ["Low entry", "Quarterly payouts"] },
+    { name: "Growth", roi: "15%", duration: "6 months", features: ["Balanced risk", "Bi-annual payouts"] },
+    { name: "Legacy", roi: "18% - 20%", duration: "12 months", features: ["Estate-grade assets", "Annual payouts"] },
+    { name: "Global Investor", roi: "custom", duration: "12 months", features: ["Diversified global portfolio", "Tailored strategy"] },
+    { name: "Enterprise", roi: "Tailored", duration: "Corporate use", features: ["Portfolio optimization", "Dedicated advisory"] },
+  ];
+
+  const container = document.getElementById("plansContainer");
+  plans.forEach(plan => {
+    container.innerHTML += `
+      <div class="border rounded-lg shadow hover:shadow-lg transition p-6 flex flex-col" data-aos="fade-up">
+        <h3 class="text-xl font-semibold mb-2">${plan.name}</h3>
+        <div class="text-3xl font-bold text-green-700">${plan.roi}</div>
+        <div class="text-sm text-gray-600 mb-4">${plan.duration}</div>
+        <ul class="flex-1 text-left mb-4">
+          ${plan.features.map(f => `<li class="before:content-['✓'] before:text-green-600 before:mr-2">${f}</li>`).join('')}
+        </ul>
+        <button class="mt-auto bg-green-600 text-white py-2 rounded hover:bg-green-700 transition">Select Plan</button>
+      </div>`;
+  });
     const projects = [
       { title: "Quincy Towers", image: "project1.jpg", status: "Ongoing" },
       { title: "Royal Green Estate", image: "project2.jpg", status: "Available" },
