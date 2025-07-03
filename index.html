@@ -48,12 +48,32 @@
         <h3 class="text-xl font-semibold mb-2">Mission & Values</h3>
         <p>We aim to build wealth for our clients through transparency, innovation, and real estate excellence.</p>
       </div>
-      <div class="relative" data-aos="fade-in">
-  <div class="overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105">
-    <img src="why-us.png" alt="Why Choose Us - Novareal Capital" class="w-full h-auto object-cover rounded-xl">
-  </div>
-      </div>
+      <div 
+  class="relative group overflow-hidden rounded-xl shadow-xl transition-all duration-700 transform hover:scale-105 hover:-translate-y-1" 
+  data-aos="zoom-in-up" 
+  onmousemove="handleTilt(event, this)" 
+  onmouseleave="resetTilt(this)"
+  style="perspective: 1000px;"
+>
+  <!-- Image -->
+  <img src="why-us1.png" alt="Why Choose Us - Novareal Capital" 
+    class="w-full h-auto object-cover transition-transform duration-700 group-hover:brightness-90 rounded-xl"
+    style="transform-style: preserve-3d;"
+  >
+
+  <!-- Overlay Stats Tint -->
+  <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-700 flex items-end p-6">
+    <div class="backdrop-blur-md bg-white/10 text-white text-sm font-medium p-4 w-full text-center rounded-lg shadow-inner border border-green-500/50">
+      Over <span class="text-green-400 font-bold">$3.2M</span> Raised • 
+      <span class="text-green-400 font-bold">92%</span> Completion Rate • 
+      <span class="text-green-400 font-bold">25%</span> Avg. ROI • 
+      <span class="text-green-400 font-bold">300+</span> Diaspora Clients
     </div>
+  </div>
+
+  <!-- Glow effect -->
+  <div class="absolute inset-0 rounded-xl border-2 border-green-500 opacity-0 group-hover:opacity-50 transition-all duration-700 pointer-events-none"></div>
+      </div>
   </section>  
   <!-- SERVICES -->  
   <section id="services" class="bg-gray-50 py-16 px-4" data-aos="fade-up">
@@ -230,5 +250,22 @@
     testimonials.forEach(text => {
       testimonialsContainer.innerHTML += `<div class="italic text-lg">${text}</div>`;
     });
-  </script></body>
+  </script>
+<script>
+  function handleTilt(e, el) {
+    const rect = el.getBoundingClientRect();
+    const x = e.clientX - rect.left - rect.width / 2;
+    const y = e.clientY - rect.top - rect.height / 2;
+
+    const rotateX = -(y / 20).toFixed(2);
+    const rotateY = (x / 20).toFixed(2);
+
+    el.querySelector('img').style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
+  }
+
+  function resetTilt(el) {
+    el.querySelector('img').style.transform = 'rotateX(0deg) rotateY(0deg) scale(1)';
+  }
+</script>
+</body>
 </html>
