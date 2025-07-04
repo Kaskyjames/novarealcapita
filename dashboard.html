@@ -1,0 +1,151 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Investor Dashboard | Novareal Capital</title>
+  <meta name="description" content="Investor dashboard at Novareal Capital. View your portfolio, transactions, and tools." />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script type="module" src="https://www.gstatic.com/firebasejs/10.12.1/firebase-app.js"></script>
+  <script type="module" src="https://www.gstatic.com/firebasejs/10.12.1/firebase-auth.js"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">  <!-- HEADER -->  <header class="bg-white shadow px-6 py-4 sticky top-0 z-50 flex justify-between items-center">
+    <h1 class="text-2xl font-bold text-green-700">Novareal Dashboard</h1>
+    <button onclick="logout()" class="bg-red-600 text-white px-4 py-2 rounded-lg">Logout</button>
+  </header>  <!-- DASHBOARD BODY -->  <main class="max-w-6xl mx-auto p-6 space-y-10"><!-- WELCOME + SNAPSHOT -->
+<section class="bg-white p-6 rounded-xl shadow">
+  <h2 class="text-xl font-semibold mb-2">Welcome, <span id="userName">Investor</span> 👋</h2>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+    <div class="bg-green-100 p-4 rounded-lg">
+      <p class="text-sm text-gray-600">Invested Amount</p>
+      <p class="text-2xl font-bold text-green-700">$25,000</p>
+    </div>
+    <div class="bg-blue-100 p-4 rounded-lg">
+      <p class="text-sm text-gray-600">Total ROI</p>
+      <p class="text-2xl font-bold text-blue-700">$6,700</p>
+    </div>
+    <div class="bg-yellow-100 p-4 rounded-lg">
+      <p class="text-sm text-gray-600">Withdrawals</p>
+      <p class="text-2xl font-bold text-yellow-700">$2,000</p>
+    </div>
+  </div>
+</section>
+
+<!-- NOTIFICATIONS -->
+<section class="bg-white p-6 rounded-xl shadow">
+  <h2 class="text-xl font-semibold mb-4">Notifications</h2>
+  <ul class="list-disc ml-5 text-gray-700">
+    <li>Next ROI payout scheduled for August 15, 2025</li>
+    <li>Identity verification approved</li>
+  </ul>
+</section>
+
+<!-- PORTFOLIO BREAKDOWN -->
+<section class="bg-white p-6 rounded-xl shadow">
+  <h2 class="text-xl font-semibold mb-4">Portfolio Breakdown</h2>
+  <table class="w-full text-left border-collapse">
+    <thead>
+      <tr class="border-b text-gray-600">
+        <th class="p-2">Plan</th>
+        <th class="p-2">Amount</th>
+        <th class="p-2">Start Date</th>
+        <th class="p-2">Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-b">
+        <td class="p-2">Legacy</td>
+        <td class="p-2">$25,000</td>
+        <td class="p-2">June 10, 2025</td>
+        <td class="p-2 text-green-700 font-semibold">Active</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- TRANSACTION HISTORY -->
+<section class="bg-white p-6 rounded-xl shadow">
+  <div class="flex justify-between items-center mb-4">
+    <h2 class="text-xl font-semibold">Transaction History</h2>
+    <button class="text-sm text-green-700 underline">Download Statement</button>
+  </div>
+  <div class="overflow-x-auto">
+    <table class="min-w-full text-left border-collapse">
+      <thead class="text-gray-600">
+        <tr>
+          <th class="p-2">Date</th>
+          <th class="p-2">Type</th>
+          <th class="p-2">Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="border-b">
+          <td class="p-2">June 15, 2025</td>
+          <td class="p-2">Investment</td>
+          <td class="p-2 text-green-700">$25,000</td>
+        </tr>
+        <tr class="border-b">
+          <td class="p-2">July 1, 2025</td>
+          <td class="p-2">ROI</td>
+          <td class="p-2 text-blue-700">$3,500</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- INVESTMENT CALCULATOR -->
+<section class="bg-white p-6 rounded-xl shadow">
+  <h2 class="text-xl font-semibold mb-4">Investment Calculator</h2>
+  <div class="grid md:grid-cols-2 gap-4">
+    <input type="number" id="calcAmount" placeholder="Enter amount" class="p-3 border rounded-lg" />
+    <select id="calcPlan" class="p-3 border rounded-lg">
+      <option value="Starter">Starter ($2,500 - $9,500)</option>
+      <option value="Growth">Growth ($10,000 - $20,000)</option>
+      <option value="Legacy">Legacy ($25,000 - $45,000)</option>
+      <option value="Global">Global Investor ($50,000+)</option>
+      <option value="Enterprise">Enterprise ($100,000+)</option>
+    </select>
+  </div>
+  <button onclick="calculateReturn()" class="mt-4 bg-green-700 text-white px-6 py-2 rounded-lg">Estimate Return</button>
+  <p id="calcResult" class="mt-4 text-blue-700 font-semibold"></p>
+</section>
+
+<!-- SUPPORT CENTER -->
+<section class="bg-white p-6 rounded-xl shadow">
+  <h2 class="text-xl font-semibold mb-4">Support Center</h2>
+  <ul class="list-disc ml-5 text-gray-700 space-y-2">
+    <li><a href="#" class="text-green-600 underline">Submit a ticket</a></li>
+    <li><a href="#" class="text-green-600 underline">View FAQs</a></li>
+  </ul>
+</section>
+
+<!-- SETTINGS -->
+<section class="bg-white p-6 rounded-xl shadow">
+  <h2 class="text-xl font-semibold mb-4">Account Settings</h2>
+  <ul class="list-disc ml-5 text-gray-700 space-y-2">
+    <li><a href="#" class="text-green-600 underline">Update profile</a></li>
+    <li><a href="#" class="text-green-600 underline">Change password</a></li>
+  </ul>
+</section>
+
+  </main>  <script>
+    function calculateReturn() {
+      const amount = parseFloat(document.getElementById("calcAmount").value);
+      const plan = document.getElementById("calcPlan").value;
+      let rate = 0;
+      if (plan === "Starter") rate = 0.08;
+      if (plan === "Growth") rate = 0.12;
+      if (plan === "Legacy") rate = 0.18;
+      if (plan === "Global") rate = 0.22;
+      if (plan === "Enterprise") rate = 0.25;
+      const result = amount * (1 + rate);
+      document.getElementById("calcResult").textContent = `Estimated Return: $${result.toFixed(2)}`;
+    }
+
+    function logout() {
+      // Firebase logout function placeholder
+      alert("Logging out...");
+    }
+  </script></body>
+</html>
